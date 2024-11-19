@@ -97,7 +97,18 @@
     </div>
   </div>
   <!-- Gallery -->
+<script>
+   // Get the menu toggle button and navbar list
+ const menuToggle = document.getElementById('menuToggle');
+ const navbarList = document.getElementById('navbarList');
 
+ // Add click event to toggle the menu
+ menuToggle.addEventListener('click', function() {
+     navbarList.classList.toggle('active');
+     menuToggle.classList.toggle('active');
+     console.log("Menu toggled");
+ });
+  </script>
   <!-- Bootstrap JS (optional) -->
   <script src="js/script.js"></script>
   <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.6/dist/umd/popper.min.js"></script>
