@@ -1,5 +1,5 @@
- /* General Reset */
- * {
+/* General Reset */
+* {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
@@ -16,15 +16,20 @@ header {
     color: #fff;
     padding: 10px 20px;
     box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
-    position: sticky; /* Makes the navbar sticky */
-    top: 0; /* Stick the navbar at the top of the page */
-    z-index: 1000; /* Ensures the navbar stays above other elements */
+    position: sticky;
+    top: 0;
+    z-index: 1000;
 }
 
 nav {
     display: flex;
     align-items: center;
     justify-content: space-between;
+}
+
+.navbar-header {
+    display: flex;
+    align-items: center;
 }
 
 .logo-container {
@@ -66,31 +71,21 @@ ul li a:hover {
     color: #026670;
 }
 
-/* Dropdown Styling */
-ul li ul {
-    position: absolute;
-    top: 100%;
-    left: 0;
+/* Hamburger Menu */
+.menuToggle {
     display: none;
-    flex-direction: column;
-    background-color: #026670;
-    border-radius: 5px;
-    padding: 10px;
-    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    background-color: transparent;
+    border: none;
+    cursor: pointer;
+    z-index: 1001;
 }
 
-ul li ul li {
-    margin: 5px 0;
-}
-
-ul li ul li a {
-    padding: 10px 15px;
-    display: block;
-    white-space: nowrap;
-}
-
-ul li:hover ul {
-    display: flex;
+.menuToggle .bar {
+    width: 30px;
+    height: 4px;
+    background-color: white;
+    margin: 6px 0;
+    transition: 0.4s;
 }
 
 /* Responsive Design */
@@ -113,15 +108,27 @@ ul li:hover ul {
 
     .menuToggle {
         display: block;
-        background-color: transparent;
-        border: none;
-        color: #fff;
-        font-size: 1.5rem;
-        cursor: pointer;
-        margin-left: auto;
     }
 
+    /* Menu is visible when 'active' class is added */
     #navbarList.active {
         display: flex;
+    }
+
+    /* Animate hamburger to close when active */
+    .menuToggle.active .bar:nth-child(1) {
+        transform: rotate(-45deg);
+        position: relative;
+        top: 8px;
+    }
+
+    .menuToggle.active .bar:nth-child(2) {
+        opacity: 0;
+    }
+
+    .menuToggle.active .bar:nth-child(3) {
+        transform: rotate(45deg);
+        position: relative;
+        top: -8px;
     }
 }
