@@ -67,7 +67,7 @@ ul li a:hover {
     border: none;
     cursor: pointer;
     position: absolute;
-    right: 20px; /* Position it to the right */
+    right: 0px; /* Position it to the right */
     top: 0px; /* Position it at the top */
     z-index: 1001;
 }
