@@ -14,35 +14,57 @@
     background-color: #f9f9f9; /* Optional: Background for the section */
 }
 
-/* General styles for the benefits-box */
+/* Responsive Design for the benefits-box */
 .benefits-box {
-    background-color: #fff; /* White background for the box */
-    border-radius: 8px; /* Rounded corners */
-    padding: 20px; /* Padding inside the box */
-    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1); /* Shadow effect */
-    margin: 20px auto; /* Center the box and add vertical spacing */
-    max-width: 800px; /* Optional: Set a max width for the box */
-    width: 90%; /* Ensure the box shrinks to fit smaller screens */
+    background-color: #fff;
+    border-radius: 8px;
+    padding: 20px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+    margin: 20px auto;
+    max-width: 800px;
+    width: 90%;
+    box-sizing: border-box; /* Ensure padding doesn't overflow */
+    text-align: left; /* Align text to the left */
 }
 
-/* Responsive Design */
+/* Make the text more readable on small screens */
+.benefits-box h2 {
+    font-size: 1.5rem; /* Adjust title size */
+}
+
+.benefits-box ul {
+    padding: 0;
+    list-style-type: none; /* Remove default bullet points */
+}
+
+.benefits-box ul li {
+    margin-bottom: 10px; /* Add space between list items */
+    font-size: 1rem; /* Ensure readable font size */
+}
+
+/* Adjust layout for smaller screens */
 @media (max-width: 768px) {
     .benefits-box {
-        padding: 15px; /* Reduce padding for smaller screens */
-        box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1); /* Lighter shadow for smaller screens */
+        padding: 15px;
+        font-size: 0.9rem; /* Adjust text size */
+    }
+
+    .benefits-box h2 {
+        font-size: 1.25rem;
     }
 }
 
 @media (max-width: 480px) {
     .benefits-box {
-        padding: 10px; /* Further reduce padding for very small screens */
-        font-size: 14px; /* Adjust font size for better readability */
+        padding: 10px;
+        font-size: 0.85rem;
     }
 
     .benefits-box ul li {
-        font-size: 14px; /* Adjust list item font size */
+        font-size: 0.85rem; /* Adjust list item text size */
     }
 }
+
 
 
     </style>
