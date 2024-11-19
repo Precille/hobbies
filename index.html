@@ -30,10 +30,15 @@
                 <li><a href="gallery.html">Gallery</a></li>
                 <li><a href="contactus.html">Contact</a></li>
             </ul>
+            <!-- Hamburger icon -->
+            <button class="menuToggle" id="menuToggle">
+                <div class="bar"></div>
+                <div class="bar"></div>
+                <div class="bar"></div>
+            </button>
         </nav>
     </header>
     
-
 <!-- Hero Section -->
 <section id="home" class="hero" data-aos="fade-in">
     <video autoplay muted loop playsinline id="background-video">
@@ -248,7 +253,7 @@
 <div id="modal" class="modal">
     <div class="modal-content" data-aos="fade-up">
         <span class="close">&times;</span>
-        <img src=""  id="modal-image" class="modal-image">
+        <img src="" alt="Hobby Image" id="modal-image" class="modal-image">
         <h3 id="modal-title"></h3>
         <p id="modal-description"></p>
         <ul id="modal-types"></ul>
@@ -542,6 +547,16 @@ window.onclick = (event) => {
     }
 };
 
+ // Get the menu toggle button and navbar list
+ const menuToggle = document.getElementById('menuToggle');
+ const navbarList = document.getElementById('navbarList');
+
+ // Add click event to toggle the menu
+ menuToggle.addEventListener('click', function() {
+     navbarList.classList.toggle('active');
+     menuToggle.classList.toggle('active');
+     console.log("Menu toggled");
+ });
     </script>
     <script src="js/script.js"></script>
     <!-- Include AOS JavaScript for animations -->
