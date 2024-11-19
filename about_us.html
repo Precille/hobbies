@@ -88,6 +88,17 @@
 <script src="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.js"></script>
 <script>
     AOS.init();
+
+     // Get the menu toggle button and navbar list
+ const menuToggle = document.getElementById('menuToggle');
+ const navbarList = document.getElementById('navbarList');
+
+ // Add click event to toggle the menu
+ menuToggle.addEventListener('click', function() {
+     navbarList.classList.toggle('active');
+     menuToggle.classList.toggle('active');
+     console.log("Menu toggled");
+ });
 </script>
 <script src="js/script.js"></script>
 </body>
